@@ -1,10 +1,12 @@
 function sortear(){
-    let quantidadeDeNumeros = document.getElementById('quantidade').value;
-    let doNumero = document.getElementById('de').value;
-    let ateONumero = document.getElementById('ate').value;
-
-    alert(`Quantidade: ${quantidadeDeNumeros}`);
-    alert(`do Numero: ${doNumero}`);
-    alert(`ate o Numero: ${ateONumero}`);
+    let quantidadeDeNumeros = parseInt(document.getElementById('quantidade').value);
+    let doNumero = parseInt(document.getElementById('de').value);
+    let ateONumero = parseInt(document.getElementById('ate').value);
     
+    let numero = obterNumeroAleatorio(doNumero,ateONumero);
+    alert(numero);
+}
+
+function obterNumeroAleatorio(min,max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
