@@ -28,6 +28,11 @@ function sortear(){
         alert('Campo "Do número" deve ser inferior ao campo "Até o número". Verifique!');
         return;
     }
+
+    if (quantidadeDeNumeros > (doNumero - ateONumero + 1)) {
+        alert('Quantidade de numeros deve ser menor. Verifique!');
+        return;
+    }
 }
 
 function obterNumeroAleatorio(min,max) {
