@@ -22,6 +22,12 @@ function sortear(){
 
     // chamar a função depois de clicar no botão sortear.
     alterarStatusBotao();
+
+    // se o campo doNUmero for maior que o campo ateONumero.
+    if (doNumero > ateONumero){
+        alert('Campo "Do número" deve ser inferior ao campo "Até o número". Verifique!');
+        return;
+    }
 }
 
 function obterNumeroAleatorio(min,max) {
